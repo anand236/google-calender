@@ -49,3 +49,5 @@
 10.to show the dates and month, year used dat methods implemented by using DOM concept.
 
 11.to complete this task i reffered youtube,w3school,bootstrap
+
+note: work pending on search bar and date modal popup.
