@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>calender</title>
+   
+
+    <!-- includes bootstarp css file -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- includes css file -->
+    <link rel="stylesheet" href="css/calender.css">
+
+    <!-- font-awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+</head>
+
+<body onLoad="renderDate()">           <!--here i used renderDate function cause whenever page loads the whole calender gets loaded up--> 
+    <div class="container-fluid">             <!--here i used bootstrap for the width of the page-->
+        <nav class='navbar navbar-expand-lg navbar-light bg-light '>         <!--bootstrap navbar class-->
+            <a href="#" class='display-4 mb-3' style="text-decoration: none;">Calender</a>
+            <div class='ml-5'>
+                <a href="#" style="text-decoration: none;color: black;" onclick="prev_month('prev')"><span
+                        class='prev'>&#10094</span></a>                                                     <!--used anchor tag to move to next or prev month-->
+                <a href="#" style="text-decoration: none;color: black;" onclick="next_month('next')"><span
+                        style="margin-left:20px ;" class='next'>&#10095</span></a>
+            </div>
+            <div>
+                <p style='margin-left: 30px;' class="display-4" id='todays_date'></p>           <!--used DOM innerHTML concept to show the day,month,and date in navbar-->
+            </div>
+            <input type="text" class='form-control col-sm-5 ml-5' placeholder="Search Holiday">  
+        </nav>
+
+        <div class='weekends'>          <!--showing weekdays navbar using css for styling-->
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+        </div>
+
+        <div class='days'>              <!--showing days used css for styling-->
+        </div>
+
+        <!--this is a modal which pops up when a date is clicked in a calender-->
+
+        <div class="modal" id= 'popup' tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <input type="text" class="modal-title form-control" placeholder='add title and time'>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <button class='btn btn-primary btn-outline-primary'>Event</button>            <!--including buttons and input text in the modal-->
+                  
+                  <button class='btn btn-primary btn-outline-danger'>Reminder</button>
+                  
+                  <button class='btn btn-primary btn-outline-warning'>Task</button>
+
+                  <p id='modalDate' style="font-size: 25px;" class="mt-3"></p>
+
+                  <input type="text" class="form-control"placeholder='add guest'>
+
+                  <input type="text" class="form-control mt-3" placeholder='add locaton'>
+
+                  <input type="address" class="form-control mt-3" style="height: 100px;" placeholder='add description'>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+    </div>
+
+    <!-- includes js file -->
+    <script src='js/calender.js'></script>
+    
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+
+(html)
+1. in this task i have used html5,css3,javascript,jquery and bootstrap.
+
+2.used jquery, bootstrap, external link
+
+3.in body tag i used onload renderbody, whenever page loads calender get loded up.
+
+4.for creating navbar used bootstrap navbar class.
+
+5.to style the weekdays used css.
+
+6.for showing dates used for loop in js file.
+
+7.after clicking any date to show modal popup, used jquery.
+
+(css)
+
+1.made weekdays(.weekends) look horizantally usng flex.
+
+2.devided the 100/7 to get exact width of each day
+
+3.days div:hover for hovering color changes 
+
+4.changed the current date background color which lightblue
+
+5.for national holiday used red.
+
+(javascript)
+
+1.to show the current day,month,year used date method, after getting it showed the output in navbar by using DOM concept
+
+2.in order to find the length of the month used var end_date and for getting previous month dates used var prev_month_date.
+
+3.used an empty array date_number to store the dates.
+
+4.to get the ladt month dates used for loop 
+
+5.to color the current day used for loop, used class = 'today' to change the background color
+
+6.for coloring the national holday used else if statement used class='holiday' for red color.
+
+7.the whole calender dates shows up in browser by using document.getElementsByClassName('days')[0].innerHTML = date_number;
+
+8.for changing the month used function prev and next.
+
+9.for showing the modal popup used jquery.
+
+10.to show the dates and month, year used dat methods implemented by using DOM concept.
+
+11.to complete this task i reffered youtube,w3school,bootstrap

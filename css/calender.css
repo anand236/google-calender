@@ -1,0 +1,39 @@
+.weekends{                          /* this is to modify the weekdays in navbar */
+    display: flex;
+    margin-bottom: 10px;
+    background-color: lightblue;
+}
+
+.weekends div{
+    width: 14.28%;
+    font-size: 20px;
+    text-align: center;   
+}
+
+.days {                         /* this is to place the date according to the days*/
+    display: flex;  
+    flex-wrap: wrap;
+}
+
+.days div{
+    width: 14.28%;
+    font-size: 20px;
+    padding: 43px;
+    text-align: center;
+    border-bottom:solid 1px black; 
+    transition:all 0.4s; 
+}
+
+.days div:hover{                            /*whenver mouse hover on date color changes to dark gray*/
+    background-color: darkgray;
+}
+
+.today{                                        /* shows the different color for current date*/
+    background-color:  lightblue;
+}
+
+.holidays{                                      /* shows the red color for national holidays*/
+    background-color: red;
+}
+
+
